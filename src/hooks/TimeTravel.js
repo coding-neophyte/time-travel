@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-
 const useTimeTravel = () => {
     const [date, setDate] = useState([]);
     const [index, setIndex] = useState(null)
@@ -14,7 +13,7 @@ const useTimeTravel = () => {
     }, [index])
 
 
-const saveDate = (event) =>{
+const saveDate = (event) => {
     setCurrentDate(event.target.value)
     setDate((prevState) => [...prevState, event.target.value])
     setIndex(date.length)
@@ -22,11 +21,15 @@ const saveDate = (event) =>{
 }
 
 const undoDate = () => {
-
+    if(index > 0){
+    setIndex((prevState) => prevState - 1)
+    }
 }
 
 const redoDate = () => {
-
+    if(index < date.length - 1){
+    setIndex((prevState) => prevState + 1)
+    }
 }
 
 return { date, saveDate, undoDate, redoDate, currentDate }
