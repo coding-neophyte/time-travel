@@ -8,14 +8,15 @@ const useTimeTravel = () => {
     useEffect(() => {
         if(index !== null){
         setCurrentDate(date[index])
-        return currentDate
+        return currentDate;
          }
     }, [index])
 
 
-const saveDate = (event) => {
-    setCurrentDate(event.target.value)
-    setDate((prevState) => [...prevState, event.target.value])
+const saveDate = (value) => {
+    // const event = action;
+    setCurrentDate(value)
+    setDate((prevState) => [...prevState, value])
     setIndex(date.length)
 
 }
