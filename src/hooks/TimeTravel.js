@@ -14,7 +14,6 @@ const useTimeTravel = () => {
 
 
 const saveDate = (value) => {
-    // const event = action;
     setCurrentDate(value)
     setDate((prevState) => [...prevState.slice(0, index + 1), value, ...prevState.slice(index + 1, prevState.length + 1)])
     setIndex(date.length)

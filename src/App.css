@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+html{
+    background-image: url('./assets/travel.jpg');
+}
+
+
+button{
+    width: 100px;
+    font-family: 'Anton', sans-serif;
+    font-size: 35px;
+    border-radius: 10px;
+    color: blueviolet;
+    background-color: burlywood;
+    border-color: blueviolet;
+
+}
+
+
+p{
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    padding: 25px;
+    color: blueviolet;
+    
+
+}
+
+
+input{
+    font-size: 25px;
+    color: blueviolet;
+    border-color: blueviolet;
+    border-radius: 8px;
+}
